@@ -1,7 +1,7 @@
 from django.db import models
-from django.db.models import Model
+from django.db import models
 
-class Thing(Model):
-    name=models.CharField(max_length=10, unique=True)
-    description=models.CharField(max_length=20)
-    quantity=models.IntegerField()
+class Thing(models.Model):
+        name=models.CharField(max_length=10, unique=True)
+        description=models.CharField(max_length=20, blank=True)
+        quantity=models.IntegerField(blank=True)
